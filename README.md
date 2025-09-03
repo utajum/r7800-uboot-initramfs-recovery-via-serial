@@ -4,11 +4,11 @@ This repository contains an experimental method for uploading OpenWrt firmware t
 
 **WARNING: This procedure is highly experimental and extremely slow. While challenging, this process does work.**
 
-## Focused Firmware Image
+## Firmware Image Details
 
 *   `openwrt-24.10.2-ipq806x-generic-netgear_r7800-initramfs-uImage`: This is the OpenWrt initramfs firmware image specifically targeted for the Netgear R7800. This image is loaded into the router's RAM and runs a temporary operating system. Both this version and `openwrt-19.07.9-ipq806x-generic-netgear_r7800-initramfs-uImage` have been tested and confirmed to work with this upload method. However, the 19.x version exhibited non-functional Wi-Fi (due to existing broken LAN ports on the test router I could not get a network connection), while the 24.x version functioned correctly.
 
-## Key Script
+## Script Details
 
 *   `upload_firmware_byte.py`: This Python script facilitates the byte-by-byte upload of the firmware image to the router's memory via a serial connection. It uses `mw.b` (memory write byte) U-Boot commands, sending one byte at a time, which can be more reliable than `mw.l` (memory write long) for unstable connections, but significantly increases transfer time.
 
