@@ -23,8 +23,11 @@ SERIAL_PORT = '/dev/ttyUSB0'
 BAUD_RATE = 115200
 LOAD_ADDRESS = 0x44000000
 # Delay between commands (seconds)
-COMMAND_DELAY = 0.005 
+COMMAND_DELAY = 0.005
 # --- End Configuration ---
+```
+
+The `COMMAND_DELAY` parameter introduces a small pause between sending each byte command. Increasing this value can potentially improve transfer reliability, especially in environments with unstable serial connections. The current default of `0.005` seconds has been tested multiple times and rarely resulted in corrupted bytes, indicating a reasonable balance between speed and reliability.
 ```
 
 ### Estimated Transfer Time
