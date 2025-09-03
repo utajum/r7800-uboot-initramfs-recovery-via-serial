@@ -10,7 +10,7 @@ This repository contains an experimental method for uploading OpenWrt firmware t
 
 ## Script Details
 
-*   `upload_firmware_byte.py`: This Python script facilitates the byte-by-byte upload of the firmware image to the router's memory via a serial connection. It uses `mw.b` (memory write byte) U-Boot commands, sending one byte at a time, which can be more reliable than `mw.l` (memory write long) for unstable connections, but significantly increases transfer time.
+*   `upload_firmware_byte.py`: This Python script facilitates the byte-by-byte upload of the firmware image to the router's memory via a serial connection. It uses `mw.b` (memory write byte) U-Boot commands, sending one byte at a time.
 
 ### `upload_firmware_byte.py` Configuration
 
