@@ -28,7 +28,7 @@ COMMAND_DELAY = 0.005
 ```
 
 The `COMMAND_DELAY` parameter introduces a small pause between sending each byte command. Increasing this value can potentially improve transfer reliability, especially in environments with unstable serial connections. The current default of `0.005` seconds has been tested multiple times and rarely resulted in corrupted bytes, indicating a reasonable balance between speed and reliability.
-```
+
 
 ### Estimated Transfer Time
 
