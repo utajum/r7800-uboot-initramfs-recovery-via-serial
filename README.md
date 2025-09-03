@@ -47,8 +47,12 @@ The `upload_firmware_byte.py` script will estimate the transfer time based on th
 ## Risks and Expectations
 
 *   **Extreme Slowness**: The byte-by-byte transfer is inherently slow, potentially taking many hours.
-*   **Data Integrity Considerations**: Any interruption or electrical noise can lead to data inconsistencies. However, the process can be repeated from the U-Boot prompt without restarting the router, as the memory addresses will be overwritten correctly in subsequent passes if a byte was missed or corrupted. The script does not verify data integrity.
+*   **Data Integrity Considerations**: Any interruption or electrical noise can lead to data inconsistencies. However, the process can be repeated from the U-Boot prompt **without restarting the router**, as the memory addresses will be overwritten correctly in subsequent passes if a byte was missed or corrupted. The script does not verify data integrity.
 *   **Environmental Sensitivity**: Power flickers, loose cables, or the computer going to sleep can disrupt the transfer. Maintaining a stable environment is crucial.
 *   **Achievable with Persistence**: Due to the nature of serial communication for large files, success requires patience and a stable setup. If the `bootm` command fails or results in unexpected output, it indicates a data issue, and another pass of the upload process is recommended.
 
 If successful, the router will boot a temporary OpenWrt instance from RAM. You would then need to flash a permanent `sysupgrade` image.
+
+## Additional Resources
+
+*   **OpenWrt R7800 Device Page**: For more detailed information and official documentation regarding the Netgear R7800 and OpenWrt, please refer to the [OpenWrt R7800 Wiki](https://openwrt.org/toh/netgear/r7800).
